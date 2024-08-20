@@ -48,4 +48,4 @@ nbproject
 # temp
 .temp
 
-/config/pimcore/google-api-private-key.json
+config/pimcore/google-api-private-key.json.example
