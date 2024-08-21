@@ -56,3 +56,4 @@ composer.enterprise.json
 composer.json
 docker-compose.yaml
 .env
+.docker
