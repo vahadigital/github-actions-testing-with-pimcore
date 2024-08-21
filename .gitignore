@@ -49,3 +49,10 @@ nbproject
 .temp
 
 config/pimcore/google-api-private-key.json.example
+/.docker
+/.vscode
+composer.lock
+composer.enterprise.json
+composer.json
+docker-compose.yaml
+.env
