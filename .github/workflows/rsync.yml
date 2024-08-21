@@ -13,7 +13,7 @@ jobs:
       - name: rsync
         uses: burnett01/rsync-deployments@7.0.1
         with: 
-          switches: -avr --exclude=public/bundles/
+          switches: -avr --exclude=public/bundles/ --dry-run
           legacy_allow_rsa_hostkeys: "true"
           path: /public/
           remote_path: ~/my-project/public/
