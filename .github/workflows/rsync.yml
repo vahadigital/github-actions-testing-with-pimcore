@@ -1,0 +1,24 @@
+name: Remote Sync with Manual Trigger
+on: [workflow_dispatch]
+
+jobs:
+  Sync:
+    name: Rsync
+    runs-on: ubuntu-latest
+    environment: test_server
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.7 
+      - name: rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with: 
+          switches: -avr --exclude=public/bundles/
+          legacy_allow_rsa_hostkeys: "true"
+          path: /public/
+          remote_path: ~/my-project/public/
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.REMOTE_KEY }}
+
+
